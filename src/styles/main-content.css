@@ -1,4 +1,4 @@
-/* header */
+/* HEADER */
 .main-container {
   max-width: 80vw;
   height: 100vh;
@@ -6,14 +6,38 @@
   margin-right: 56px;
 }
 
+/* DISPLAY * TOTAL e vamos passar rapidamente por cada um deles
+block: Um elemento com display: block sempre inicia em uma nova linha e ocupa toda a largura disponível.
+Ele empilha verticalmente um sobre o outro.
+
+inline: Um elemento com display: inline não inicia em uma nova linha e apenas ocupa o espaço necessário para o conteúdo.
+Elementos inline não aceitam largura (width) e altura (height).
+
+inline-block: Um elemento com display: inline-block combina características de elementos inline e block.
+Ele não inicia uma nova linha e permite a definição de largura e altura.
+
+flex: A propriedade display: flex é usada para criar um contêiner flexível.
+Os itens dentro do contêiner flexível podem ser ajustados em termos de tamanho, ordem e alinhamento.
+
+grid: A propriedade display: grid é usada para criar um contêiner de layout em grade.
+Permite definir um layout bidimensional com linhas e colunas, facilitando o posicionamento de elementos.
+
+inline-flex:Similar ao flex, mas o contêiner flexível é tratado como um elemento inline.
+
+table, table-row, table-cell: Esses valores de display são usados para criar layouts semelhantes a tabelas.
+
+none: Um elemento com display: none é completamente removido do fluxo de layout e não é renderizado na tela.
+*/
 .header__navigation {
   display: flex;
+  /* ESSES detalhes que tem dentro do display flex, mostra no navegador como fica */
   justify-content: space-between;
   align-items: center;
   padding: 16px;
   margin: 10px;
   border-radius: 8px;
   background-color: #121212;
+  /* padding: 12px; */
 }
 
 .header__navigation .navigation {
@@ -26,16 +50,17 @@
   margin-right: 1.25rem;
 }
 
-.arrow-left, .arrow-right {
+.arrow-left,
+.arrow-right {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 32px;
   height: 32px;
   background: var(--bg-icon);
-  background-color: var(--bg-arrow-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
   border: none;
-  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -67,30 +92,27 @@
   padding: 0px 100px 0 12px;
   color: #fff;
   text-overflow: ellipsis;
+  outline: none;
+  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  outline: none;
 }
 
 .header__login .subscribe {
-  color: #a7a7a7;
+  color: var(--text-sub);
   font-size: 16px;
   font-weight: 700;
   background-color: transparent;
   margin-right: 32px;
-  border: 0;
-  cursor: pointer;
 }
 
 .header__login .login {
   width: 100px;
   height: 48px;
-  color: #000;
+  color: var(--text-base-dark);
   font-size: 16px;
   font-weight: 700;
   border-radius: 40px;
-  border: 0;
-  cursor: pointer;
 }
 
 /* HOVER */
@@ -154,12 +176,12 @@
 /* FIM SCROLL */
 
 .offer__list-item {
-   display: grid;
+  /* display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   gap: 16px;
-  margin-bottom: 16px; 
+  margin-bottom: 16px; */
 
   /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA */
   display: grid;  /* define o modelo de layout do elemento como uma grade */
@@ -360,4 +382,3 @@
   padding: 20px 40px;
 }
 /* FIM CARD ARTISTA */
-
